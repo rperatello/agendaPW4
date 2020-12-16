@@ -1,0 +1,31 @@
+{
+  "name": "pw4_trabalho_ageletronica",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para a disciplina de Programação para Web 4 da turma de 2020/2 do curso de análise e desenvolimento de sistemas (ADS) do Instituto Federal de Ciêcia e Tecnologia (IFSP) campus São Carlos.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.7.0",
+    "jwt-simple": "^0.5.6",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogcolaco/pw4_trabalho_agEletronica.git"
+  },
+  "author": "Roger Peratello, Rogério Colaço, Mateus Zanes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rogcolaco/pw4_trabalho_agEletronica/issues"
+  },
+  "homepage": "https://github.com/rogcolaco/pw4_trabalho_agEletronica#readme"
+}

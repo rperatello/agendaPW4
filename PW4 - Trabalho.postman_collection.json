@@ -1,0 +1,611 @@
+{
+	"info": {
+		"_postman_id": "9a0d9bfe-d8de-4607-b59b-9135acc44e9d",
+		"name": "PW4 - Trabalho",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/adicionarUsuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Roger Peratello",
+							"type": "text"
+						},
+						{
+							"key": "login",
+							"value": "roger",
+							"type": "text"
+						},
+						{
+							"key": "senha",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "admin",
+							"value": "1",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/adicionarUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adicionarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/alterarUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Rogério Colaço",
+							"type": "text"
+						},
+						{
+							"key": "login",
+							"value": "rogerio_col",
+							"type": "text"
+						},
+						{
+							"key": "senha",
+							"value": "colaco",
+							"type": "text"
+						},
+						{
+							"key": "admin",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "9",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/alterarUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alterarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/excluirUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/excluirUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"excluirUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/selecionarUsuario/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/selecionarUsuario/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"selecionarUsuario",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/listarUsuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/listarUsuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listarUsuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/meusCompromissos/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/meusCompromissos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"meusCompromissos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/adicionarCompromisso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "data",
+							"value": "2021/02/13 08:00:00",
+							"type": "text"
+						},
+						{
+							"key": "obs",
+							"value": "Aniversário",
+							"type": "text"
+						},
+						{
+							"key": "participantes",
+							"value": "Roger, Rogério, Mateus",
+							"type": "text"
+						},
+						{
+							"key": "endereco",
+							"value": "Rua Aristides de Santi, 06 - casa 04",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Em andamento",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/adicionarCompromisso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adicionarCompromisso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/alterarCompromisso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "data",
+							"value": "2021/02/13 08:00:00",
+							"type": "text"
+						},
+						{
+							"key": "obs",
+							"value": "Aniversário",
+							"type": "text"
+						},
+						{
+							"key": "participantes",
+							"value": "Roger, Rogério, Mateus",
+							"type": "text"
+						},
+						{
+							"key": "endereco",
+							"value": "Rua Aristides de Santi, 06 - casa 04",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Em andamento",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/alterarCompromisso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alterarCompromisso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/selecionarCompromisso/4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/selecionarCompromisso/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"selecionarCompromisso",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/excluirCompromisso/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/excluirCompromisso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"excluirCompromisso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/adicionarContato",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Rogério Colaço",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "colaco@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "telefone",
+							"value": "16 3371-7171",
+							"type": "text"
+						},
+						{
+							"key": "endereco",
+							"value": "Casa dele",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/adicionarContato",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adicionarContato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/alterarContato",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Mateus",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "zanes@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "telefone",
+							"value": "16 9999-9999",
+							"type": "text"
+						},
+						{
+							"key": "endereco",
+							"value": "No prédio",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/alterarContato",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alterarContato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/selecionarContato/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/selecionarContato/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"selecionarContato",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/meusContatos/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/meusContatos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"meusContatos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/excluirContato",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/excluirContato",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"excluirContato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"roger\",\r\n    \"senha\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
